@@ -20,7 +20,7 @@ I am a skilled systems analyst with multiple years of experience in optimizing p
 
 <section>
 <h2> EDUCATION</h2>
-<h4> HIGH SCHOOL : </h4>
+<h4> HIGH SCHOOL : Sidlamafa Secondary School </h4>
 <h4> UNIVERSITY : UNIVERSITY OF LIMPOPO (BSC IN MATHEMATICAL SCIENCE) </h4>
 </section>
 
