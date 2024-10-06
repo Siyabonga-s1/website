@@ -1,13 +1,30 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Dark background */
-    color: #e0e0e0; /* Light text color */
+    background-color: #f0f0f0; /* Light background for contrast */
+    color: #2e2e2e; /* Dark text color */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative;
 }
 
+/* Background Computer Shapes */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.1), transparent 30%),
+                radial-gradient(circle at 80% 30%, rgba(0, 255, 255, 0.1), transparent 30%),
+                radial-gradient(circle at 60% 80%, rgba(255, 255, 0, 0.1), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(255, 165, 0, 0.1), transparent 30%);
+    z-index: -1;
+}
+
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,11 +33,11 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #2e2e2e; /* Slightly lighter than background */
+    background-color: #4a90e2; /* Bright blue */
     padding: 20px;
     border-radius: 40px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -33,23 +50,23 @@ header::before {
     right: -20px;
     bottom: -20px;
     border-radius: 50px;
-    background: linear-gradient(135deg, rgba(0, 188, 212, 0.2), transparent);
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), transparent);
     z-index: -1;
 }
 
 h1 {
-    color: #00bcd4; /* Bright teal */
+    color: #ffffff; /* White text */
     font-size: 3em;
     margin: 0;
 }
 
 /* Section Styles */
 section {
-    background-color: #252526; /* Section background */
+    background-color: #e1f5fe; /* Light cyan */
     border-radius: 40px;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
@@ -60,14 +77,14 @@ section::before {
     left: 0;
     right: 0;
     height: 10px;
-    background-color: #00bcd4; /* Bright accent line */
+    background-color: #ff4081; /* Bright pink accent line */
     border-radius: 40px 40px 0 0;
 }
 
 /* Button Styles */
 button {
-    background-color: #00bcd4; /* Bright teal button */
-    color: #ffffff;
+    background-color: #ffeb3b; /* Bright yellow */
+    color: #2e2e2e; /* Dark text for contrast */
     border: none;
     border-radius: 30px;
     padding: 12px 24px;
@@ -79,17 +96,17 @@ button {
 }
 
 button:hover {
-    background-color: #008c99; /* Darker teal on hover */
+    background-color: #fbc02d; /* Darker yellow on hover */
     transform: scale(1.05); /* Slight scale effect */
 }
 
 /* Card Styles */
 .card {
-    background-color: #333333; /* Card background */
+    background-color: #ffffff; /* White card background */
     border-radius: 20px;
     padding: 15px;
     margin: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -102,7 +119,7 @@ button:hover {
     right: -15px;
     bottom: -15px;
     border-radius: 25px;
-    background: linear-gradient(135deg, rgba(0, 188, 212, 0.3), transparent);
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), transparent);
     z-index: -1;
 }
 
@@ -117,8 +134,8 @@ button:hover {
     width: 100%;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(0, 188, 212, 0.5), rgba(0, 188, 212, 0.1));
-    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.5), rgba(255, 0, 255, 0.1));
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
     animation: pulse 2s infinite;
 }
 
@@ -127,8 +144,8 @@ button:hover {
     width: 100%;
     height: 150px;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(0, 188, 212, 0.4), rgba(0, 188, 212, 0.1));
-    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.4), rgba(0, 255, 0, 0.1));
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
     animation: slide 2s infinite;
 }
 
@@ -138,7 +155,7 @@ button:hover {
     height: 0;
     border-left: 75px solid transparent;
     border-right: 75px solid transparent;
-    border-bottom: 150px solid rgba(0, 188, 212, 0.4);
+    border-bottom: 150px solid rgba(255, 165, 0, 0.4); /* Bright orange */
     position: relative;
     margin: 20px 0;
 }
@@ -151,9 +168,9 @@ button:hover {
     left: -75px;
     width: 150px;
     height: 150px;
-    background: rgba(0, 188, 212, 0.1);
+    background: rgba(255, 165, 0, 0.1);
     border-radius: 50%;
-    box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.5);
     animation: pulse 2s infinite;
 }
 
@@ -161,7 +178,7 @@ button:hover {
 .shape.hexagon {
     width: 100px;
     height: 57.74px; /* Height calculated for a perfect hexagon */
-    background-color: rgba(0, 188, 212, 0.5);
+    background-color: rgba(0, 255, 255, 0.5); /* Bright cyan */
     position: relative;
     margin: 20px auto;
 }
@@ -175,13 +192,13 @@ button:hover {
 }
 
 .shape.hexagon:before {
-    border-bottom: 28.87px solid rgba(0, 188, 212, 0.5);
+    border-bottom: 28.87px solid rgba(0, 255, 255, 0.5);
     position: absolute;
     top: -28.87px; /* Half the height of the hexagon */
 }
 
 .shape.hexagon:after {
-    border-top: 28.87px solid rgba(0, 188, 212, 0.5);
+    border-top: 28.87px solid rgba(0, 255, 255, 0.5);
     position: absolute;
     bottom: -28.87px; /* Half the height of the hexagon */
 }
@@ -216,7 +233,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background-color: #2e2e2e;
+    background-color: #4a90e2; /* Bright blue footer */
     border-radius: 30px;
 }
 
